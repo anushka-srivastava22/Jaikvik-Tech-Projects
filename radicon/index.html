@@ -22,7 +22,12 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!---->
         <style>
-            .navbar.navbar-dark {
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .navbar.navbar-dark {
     background-color: rgb(228, 228, 228); /* Set the background color to white */
 }
 .home-social-icon{
@@ -132,7 +137,7 @@
     position: relative;
     display: flex;
     width: 350px;
-    height: 250px;
+    height: 280px;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
@@ -174,32 +179,26 @@
      width: 58px;
 }
 
-.cust-name{
-     font-size: 18px;
-}
+        .cust-name{
+            font-size: 18px;
+        }
 
-.cust-profession{
-     font-size: 10px;
-}
-
-
-
-.items {
-    width: 90%;
-    margin: 0px auto;
-    margin-top: 100px
-}
-
-.slick-slide {
-    margin: 10px
-}
+        .cust-profession{
+            font-size: 10px;
+        }
 
 
 
+        .items {
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 100px
+        }
 
-/*  */
-  
-    </style>
+        .slick-slide {
+            margin: 10px
+        }
+        </style>
     
 
     </head>
@@ -217,8 +216,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <li class="nav-item mx-2 dropdown"> <!-- Added "dropdown" class -->
+                        <a class="nav-link dropdown-toggle" href="#" id="hackathonsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu" aria-labelledby="hackathonsDropdown">
+                            <li><a class="dropdown-item" href="#">At a Glance</a></li>
+                            <li><a class="dropdown-item" href="#">Our Company</a></li>
+                            <li><a class="dropdown-item" href="#">Code Of Conduct</a></li>
+                            <li><a class="dropdown-item" href="#">Board Of Director</a></li>
+                            <li><a class="dropdown-item" href="#">CSR</a></li>
+                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item mx-2 dropdown"> 
                         <a class="nav-link dropdown-toggle" href="#" id="hackathonsDropdown" role="button"
@@ -314,11 +322,11 @@
         <hr>
       
         <div class="row mt-2 d-flex align-items-center">
-            <h6 style="text-align: center; color:rgb(230, 4, 4) ;">Transforming Lives through Innovative Healthcare Solutions</h6>
+            <h6 style="text-align: center; color:rgb(230, 4, 4) ;font-size: 22px;">Transforming Lives through Innovative Healthcare Solutions</h6>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <img src="./style/imgs/about.jpg" class="img-fluid"  >
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 my-3 my-lg-0 pt-5 pb-5" style="text-transform: capitalize; line-height: 30px;" >
+            <div class="col-lg-6 col-md-12 col-sm-12 my-3 my-lg-0 pt-5 pb-5" style=" line-height: 30px;" >
                 RADICON LABORATORIES LTD. is a leading pharmaceutical company dedicated to improving lives through innovative
                 healthcare solutions. With a strong commitment to quality, we strive to provide pharmaceutical products that 
                 promote a healthy future for individuals and communities.
@@ -449,7 +457,7 @@
     
     <!--  -->
     <div class="container">
-        <h4 class="text-center mb-4" style="color: rgb(230, 4, 4); font-size: 35px; margin-top: 50px;">Testimonials</h4>
+        <h4 class="text-center mb-4" style="color: rgb(230, 4, 4); font-size: 30px; margin-top: 50px;">Testimonials</h4>
         <h6 class="text-center mb-4" style=" font-size: 20px;">What our Patient Say?</h6>
     </div>
     <div class="items">
@@ -497,7 +505,7 @@
                 <div class="template-demo">
                     <p>Radicon Laboratories Ltd is simply outstanding! Their services are top-notch, and their team goes above and beyond to ensure customer satisfaction. I've been using their services for years, and I am continually impressed by their expertise and commitment to excellence.</p>
                 </div>
-                <hr>
+                
             </div>
         </div>
         
@@ -509,14 +517,14 @@
         $(document).ready(function(){
     
     $('.items').slick({
-  dots: true,
-  infinite: true,
-  speed: 800,
- autoplay: true,
- autoplaySpeed: 2000,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
+    dots: true,
+    infinite: true,
+    speed: 800,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
     {
       breakpoint: 1024,
       settings: {
@@ -547,11 +555,12 @@
      </script>
      <!--  -->
      <div class="map-inner">
+        <h4 class="text-center mb-4" style="color: rgb(230, 4, 4); font-size: 30px; margin-top: 50px;">Wanna Take A Step?</h4>
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7005.877738636343!2d77.44745260953667!3d28.60161065942466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cee6242e0bb79%3A0x955b11d39c5eaad8!2sRadicon%20Laboratories%20Ltd!5e0!3m2!1sen!2sin!4v1688381752343!5m2!1sen!2sin" width="100%" height="500px"></iframe>
         </div>
     </div>
-    <div class="mt-5 pt-5 pb-5 footer">
+<div class="mt-5 pt-5 pb-5 footer">
     <div class="container">
         <div class="row">
         <div class="col-lg-5 col-xs-12 about-company">
@@ -564,9 +573,9 @@
         <ul class="m-0 p-0" style="list-style: none;">
           <li> <a href="#" style="text-decoration: none; color: white; ">Home</a></li>
           <li> <a href="#" style="text-decoration: none; color: white; ">About us</a></li>
+          <li> <a href="#" style="text-decoration: none; color: white; ">Contact Us</a></li>
           <li> <a href="#" style="text-decoration: none; color: white; ">Services</a></li>
           <li> <a href="#" style="text-decoration: none; color: white; ">Career</a></li>
-          <li> <a href="#" style="text-decoration: none; color: white; ">Contact Us</a></li>
         </ul>
     </div>
     <div class="col-lg-4 col-xs-12 location" style="margin-top: 20px;">
@@ -574,13 +583,13 @@
         <p><i class="fa fa-envelope" aria-hidden="true"></i>   contact@radiconlab.com</p>
         <p class="mb-0"><i class="fa fa-phone mr-3"></i>   +91 9311271107</p>
         <div class="home-social" style="margin-top: 20px;">
-            <a href="https://www.linkedin.com/in/anushka-srivastava22/" class="home-social-icon"><i
+            <a href="#" class="home-social-icon"><i
                 class="fa-brands fa-linkedin"></i></a>
             <a href="9311271107" class="home-social-icon"><i
                 class="fa-brands fa-square-whatsapp"></i></a>
-            <a href="https://www.instagram.com/little_hopeful_heart/?hl=en"
+            <a href="#"
             class="home-social-icon"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100004593605687"
+            <a href="#"
             class="home-social-icon"><i class="fa-brands fa-square-facebook"></i></a>
         </div>
         
